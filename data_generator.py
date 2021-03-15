@@ -241,8 +241,8 @@ class CustomDataGenerator(Sequence):
         else:
             zx, zy = np.random.uniform(self.zoom_range[0],self.zoom_range[1], 2)
             
-        flip_horizontal = (np.random.random() < 0.5) * self.horizontal_flip    
-        flip_vertical   = (np.random.random() < 0.5) * self.vertical_flip
+        flip_horizontal = (np.random.rand() < 0.5) * self.horizontal_flip    
+        flip_vertical   = (np.random.rand() < 0.5) * self.vertical_flip
         
         transform_parameters = {'flip_horizontal': flip_horizontal,
                                 'flip_vertical':flip_vertical,
